@@ -11,8 +11,19 @@
 		EA2C14542BE25A42009CCDBA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2C14532BE25A42009CCDBA /* ContentView.swift */; };
 		EA2C14562BE25A47009CCDBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA2C14552BE25A47009CCDBA /* Assets.xcassets */; };
 		EA2C14592BE25A47009CCDBA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA2C14582BE25A47009CCDBA /* Preview Assets.xcassets */; };
-		EA2C145B2BE25A47009CCDBA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2C145A2BE25A47009CCDBA /* Persistence.swift */; };
-		EA2C145E2BE25A47009CCDBA /* LittleLemonRestaurant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA2C145C2BE25A47009CCDBA /* LittleLemonRestaurant.xcdatamodeld */; };
+		EA2C145B2BE25A47009CCDBA /* Persistence_Original.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2C145A2BE25A47009CCDBA /* Persistence_Original.swift */; };
+		EA2C14652BE74B81009CCDBA /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2C14642BE74B81009CCDBA /* Onboarding.swift */; };
+		EA2C14672BE75346009CCDBA /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2C14662BE75346009CCDBA /* Home.swift */; };
+		EA2C14692BE75387009CCDBA /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2C14682BE75387009CCDBA /* Menu.swift */; };
+		EA2C146B2BE75C3C009CCDBA /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2C146A2BE75C3C009CCDBA /* UserProfile.swift */; };
+		EA2C146E2BE7697B009CCDBA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2C146C2BE7697A009CCDBA /* Persistence.swift */; };
+		EA2C146F2BE7697B009CCDBA /* FetchedObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2C146D2BE7697B009CCDBA /* FetchedObjects.swift */; };
+		EA2C14712BE769E3009CCDBA /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2C14702BE769E3009CCDBA /* MenuItem.swift */; };
+		EA2C14732BE76A10009CCDBA /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2C14722BE76A10009CCDBA /* MenuList.swift */; };
+		EA2C14762BE79789009CCDBA /* ExampleDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA2C14742BE79789009CCDBA /* ExampleDatabase.xcdatamodeld */; };
+		EA2C148D2BE7BAD5009CCDBA /* Dish+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2C148B2BE7BAD5009CCDBA /* Dish+CoreDataClass.swift */; };
+		EA2C148E2BE7BAD5009CCDBA /* Dish+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2C148C2BE7BAD5009CCDBA /* Dish+CoreDataProperties.swift */; };
+		EA2C14902BE9B215009CCDBA /* DishDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2C148F2BE9B215009CCDBA /* DishDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,8 +32,19 @@
 		EA2C14532BE25A42009CCDBA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EA2C14552BE25A47009CCDBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA2C14582BE25A47009CCDBA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		EA2C145A2BE25A47009CCDBA /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		EA2C145D2BE25A47009CCDBA /* LittleLemonRestaurant.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LittleLemonRestaurant.xcdatamodel; sourceTree = "<group>"; };
+		EA2C145A2BE25A47009CCDBA /* Persistence_Original.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence_Original.swift; sourceTree = "<group>"; };
+		EA2C14642BE74B81009CCDBA /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		EA2C14662BE75346009CCDBA /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		EA2C14682BE75387009CCDBA /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		EA2C146A2BE75C3C009CCDBA /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		EA2C146C2BE7697A009CCDBA /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		EA2C146D2BE7697B009CCDBA /* FetchedObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchedObjects.swift; sourceTree = "<group>"; };
+		EA2C14702BE769E3009CCDBA /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		EA2C14722BE76A10009CCDBA /* MenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
+		EA2C14752BE79789009CCDBA /* ExampleDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExampleDatabase.xcdatamodel; sourceTree = "<group>"; };
+		EA2C148B2BE7BAD5009CCDBA /* Dish+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dish+CoreDataClass.swift"; sourceTree = "<group>"; };
+		EA2C148C2BE7BAD5009CCDBA /* Dish+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dish+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		EA2C148F2BE9B215009CCDBA /* DishDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +78,21 @@
 			isa = PBXGroup;
 			children = (
 				EA2C14512BE25A42009CCDBA /* LittleLemonRestaurantApp.swift */,
+				EA2C148C2BE7BAD5009CCDBA /* Dish+CoreDataProperties.swift */,
+				EA2C148B2BE7BAD5009CCDBA /* Dish+CoreDataClass.swift */,
 				EA2C14532BE25A42009CCDBA /* ContentView.swift */,
+				EA2C14642BE74B81009CCDBA /* Onboarding.swift */,
+				EA2C14662BE75346009CCDBA /* Home.swift */,
+				EA2C146A2BE75C3C009CCDBA /* UserProfile.swift */,
+				EA2C14682BE75387009CCDBA /* Menu.swift */,
+				EA2C148F2BE9B215009CCDBA /* DishDetails.swift */,
+				EA2C146D2BE7697B009CCDBA /* FetchedObjects.swift */,
+				EA2C146C2BE7697A009CCDBA /* Persistence.swift */,
+				EA2C14702BE769E3009CCDBA /* MenuItem.swift */,
+				EA2C14722BE76A10009CCDBA /* MenuList.swift */,
+				EA2C14742BE79789009CCDBA /* ExampleDatabase.xcdatamodeld */,
 				EA2C14552BE25A47009CCDBA /* Assets.xcassets */,
-				EA2C145A2BE25A47009CCDBA /* Persistence.swift */,
-				EA2C145C2BE25A47009CCDBA /* LittleLemonRestaurant.xcdatamodeld */,
+				EA2C145A2BE25A47009CCDBA /* Persistence_Original.swift */,
 				EA2C14572BE25A47009CCDBA /* Preview Content */,
 			);
 			path = LittleLemonRestaurant;
@@ -143,9 +176,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA2C145E2BE25A47009CCDBA /* LittleLemonRestaurant.xcdatamodeld in Sources */,
-				EA2C145B2BE25A47009CCDBA /* Persistence.swift in Sources */,
+				EA2C14712BE769E3009CCDBA /* MenuItem.swift in Sources */,
+				EA2C146E2BE7697B009CCDBA /* Persistence.swift in Sources */,
+				EA2C145B2BE25A47009CCDBA /* Persistence_Original.swift in Sources */,
+				EA2C14902BE9B215009CCDBA /* DishDetails.swift in Sources */,
+				EA2C14692BE75387009CCDBA /* Menu.swift in Sources */,
+				EA2C14652BE74B81009CCDBA /* Onboarding.swift in Sources */,
+				EA2C146B2BE75C3C009CCDBA /* UserProfile.swift in Sources */,
 				EA2C14542BE25A42009CCDBA /* ContentView.swift in Sources */,
+				EA2C14672BE75346009CCDBA /* Home.swift in Sources */,
+				EA2C148D2BE7BAD5009CCDBA /* Dish+CoreDataClass.swift in Sources */,
+				EA2C148E2BE7BAD5009CCDBA /* Dish+CoreDataProperties.swift in Sources */,
+				EA2C146F2BE7697B009CCDBA /* FetchedObjects.swift in Sources */,
+				EA2C14762BE79789009CCDBA /* ExampleDatabase.xcdatamodeld in Sources */,
+				EA2C14732BE76A10009CCDBA /* MenuList.swift in Sources */,
 				EA2C14522BE25A42009CCDBA /* LittleLemonRestaurantApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,13 +398,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		EA2C145C2BE25A47009CCDBA /* LittleLemonRestaurant.xcdatamodeld */ = {
+		EA2C14742BE79789009CCDBA /* ExampleDatabase.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				EA2C145D2BE25A47009CCDBA /* LittleLemonRestaurant.xcdatamodel */,
+				EA2C14752BE79789009CCDBA /* ExampleDatabase.xcdatamodel */,
 			);
-			currentVersion = EA2C145D2BE25A47009CCDBA /* LittleLemonRestaurant.xcdatamodel */;
-			path = LittleLemonRestaurant.xcdatamodeld;
+			currentVersion = EA2C14752BE79789009CCDBA /* ExampleDatabase.xcdatamodel */;
+			name = ExampleDatabase.xcdatamodeld;
+			path = /Users/tony/Documents/Developer/iOS/CapstoneProject/LittleLemonRestaurant/LittleLemonRestaurant/ExampleDatabase.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
