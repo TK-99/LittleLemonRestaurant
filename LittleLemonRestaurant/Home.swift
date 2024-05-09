@@ -29,6 +29,19 @@ struct Home: View {
                 }
         }
         
+        .toolbar(content: {
+            HStack {
+                Spacer()
+                Image(.littleLemonLogo)
+                    .resizable()
+                    .frame(height: 40)
+                    .padding(0)
+                Image(.profileImagePlaceholder)
+                    .resizable()
+                    .frame(width: 40, height: 40)
+                    .padding(0)
+            }
+        })
         .navigationBarBackButtonHidden(true)
         
     }

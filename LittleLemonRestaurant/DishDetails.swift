@@ -16,19 +16,25 @@ struct DishDetails: View {
         
         
         VStack {
-            Rectangle()
-                .frame(width: 400, height: 150)
-            //                        let url = URL(string: menuItem.image)!
-            //                        AsyncImage(url: url) { image in
-            //                            image.resizable()
-            //                        } placeholder: {
-            //                            ProgressView()
-            //                        }
-            //                        .frame(width: 100, height: 100)
+//            Rectangle()
+//                .frame(width: 400, height: 150)
+                let url = URL(string: dish.image ?? "")
+                AsyncImage(url: url) { image in
+                    image.resizable()
+                } placeholder: {
+                    ProgressView()
+                }
+                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/ , maxHeight: 200)
             VStack {
                 Text(dish.title ?? "")
+                    .font(.title)
+                    .fontWeight(.semibold)
+                    
                 Text(dish.itemDescription ?? "")
-                Text(dish.price ?? "")
+                    .font(.callout)
+                    .padding()
+                Text("$\(dish.price ?? "0.00")")
+                    .font(.headline)
             }
             
         }
