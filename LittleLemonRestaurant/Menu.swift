@@ -242,8 +242,6 @@ struct Menu: View {
             }
         }
         .padding(.vertical, 8)
-        
-        
     }
     
     func buildPredicate() -> NSPredicate {
