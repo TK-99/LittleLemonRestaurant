@@ -25,7 +25,7 @@ struct Menu: View {
     @State private var dataHasLoaded: Bool = false
     
     func getMenuData() {
-        
+        print("clearing data")
         PersistenceController().clear()
         
         let urlString =  "https://raw.githubusercontent.com/Meta-Mobile-Developer-PC/Working-With-Data-API/main/menu.json"
@@ -65,7 +65,9 @@ struct Menu: View {
                         
                     }
                     try? viewContext.save()
+//                    print("data has loaded \(dataHasLoaded)")
                     dataHasLoaded = true
+//                    UserDefaults.standard.set(true, forKey: kDataDownloaded)
                     
                 } catch let DecodingError.dataCorrupted(context) {
                     print(context)
@@ -237,6 +239,7 @@ struct Menu: View {
 //                print("appear")
                 
                 if !dataHasLoaded {
+//                if !UserDefaults.standard.bool(forKey: kDataDownloaded) {
                     getMenuData()
                 }
             }

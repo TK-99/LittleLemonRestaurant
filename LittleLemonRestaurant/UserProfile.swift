@@ -302,7 +302,7 @@ extension UserProfile {
                 Button(action: {
                     UserDefaults.standard.set(false, forKey: kIsLoggedIn)
                     logoutButtonPressed = true
-                    
+                    PersistenceController().clear()
 //                    self.presentation.wrappedValue.dismiss()
                 }, label: {
                     Text("Log Out")

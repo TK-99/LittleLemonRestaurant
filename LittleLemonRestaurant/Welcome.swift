@@ -15,6 +15,8 @@ let kPhoneNumberChanges = "phone number changes key"
 let kSpecialOffers = "special offers key"
 let kNewsletters = "newsletters key"
 
+let kDataDownloaded = "dataloaded key"
+
 
 
 import SwiftUI
