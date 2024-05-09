@@ -13,8 +13,13 @@ struct LittleLemonRestaurantApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            NavigationStack {
+                Welcome()
+                     .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            }
         }
     }
 }
+
+
+
