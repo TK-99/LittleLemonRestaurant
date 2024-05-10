@@ -20,7 +20,6 @@
 		EA2C14712BE769E3009CCDBA /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2C14702BE769E3009CCDBA /* MenuItem.swift */; };
 		EA2C14732BE76A10009CCDBA /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2C14722BE76A10009CCDBA /* MenuList.swift */; };
 		EA2C14762BE79789009CCDBA /* ExampleDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA2C14742BE79789009CCDBA /* ExampleDatabase.xcdatamodeld */; };
-		EA2C148D2BE7BAD5009CCDBA /* Dish+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2C148B2BE7BAD5009CCDBA /* Dish+CoreDataClass.swift */; };
 		EA2C148E2BE7BAD5009CCDBA /* Dish+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2C148C2BE7BAD5009CCDBA /* Dish+CoreDataProperties.swift */; };
 		EA2C14902BE9B215009CCDBA /* DishDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2C148F2BE9B215009CCDBA /* DishDetails.swift */; };
 		EA6288322BEB63EA002863F6 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6288312BEB63EA002863F6 /* Color.swift */; };
@@ -46,7 +45,6 @@
 		EA2C14702BE769E3009CCDBA /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		EA2C14722BE76A10009CCDBA /* MenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
 		EA2C14752BE79789009CCDBA /* ExampleDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExampleDatabase.xcdatamodel; sourceTree = "<group>"; };
-		EA2C148B2BE7BAD5009CCDBA /* Dish+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dish+CoreDataClass.swift"; sourceTree = "<group>"; };
 		EA2C148C2BE7BAD5009CCDBA /* Dish+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dish+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		EA2C148F2BE9B215009CCDBA /* DishDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetails.swift; sourceTree = "<group>"; };
 		EA6288312BEB63EA002863F6 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -90,26 +88,12 @@
 			children = (
 				EA6288372BEC3C6D002863F6 /* Info.plist */,
 				EA2C14512BE25A42009CCDBA /* LittleLemonRestaurantApp.swift */,
-				EA2C148C2BE7BAD5009CCDBA /* Dish+CoreDataProperties.swift */,
-				EA2C148B2BE7BAD5009CCDBA /* Dish+CoreDataClass.swift */,
-				EA2C14642BE74B81009CCDBA /* Onboarding.swift */,
-				EA2C14662BE75346009CCDBA /* Home.swift */,
-				EA2C146A2BE75C3C009CCDBA /* UserProfile.swift */,
-				EA2C14682BE75387009CCDBA /* Menu.swift */,
-				EA6288402BEC8D6C002863F6 /* Welcome.swift */,
-				EA6288422BEC9324002863F6 /* EmailNotificationSignup.swift */,
-				EA62883E2BEC57A0002863F6 /* UIApplication.swift */,
+				EAC3C3912BEDFE2B00535B98 /* CoreData */,
+				EAC3C3922BEDFE4800535B98 /* Views */,
 				EA6288362BEC3B63002863F6 /* project_fonts */,
-				EA2C148F2BE9B215009CCDBA /* DishDetails.swift */,
-				EA2C146D2BE7697B009CCDBA /* FetchedObjects.swift */,
-				EA2C146C2BE7697A009CCDBA /* Persistence.swift */,
-				EA2C14702BE769E3009CCDBA /* MenuItem.swift */,
-				EA6288332BEB6847002863F6 /* FontList.swift */,
-				EA2C14722BE76A10009CCDBA /* MenuList.swift */,
-				EA6288312BEB63EA002863F6 /* Color.swift */,
-				EA2C14742BE79789009CCDBA /* ExampleDatabase.xcdatamodeld */,
+				EAC3C3942BEDFE7200535B98 /* Utilities */,
+				EAC3C3932BEDFE6500535B98 /* Models */,
 				EA2C14552BE25A47009CCDBA /* Assets.xcassets */,
-				EA2C145A2BE25A47009CCDBA /* Persistence_Original.swift */,
 				EA2C14572BE25A47009CCDBA /* Preview Content */,
 			);
 			path = LittleLemonRestaurant;
@@ -129,6 +113,51 @@
 				EA62883C2BEC3F5A002863F6 /* MarkaziText[wght].ttf */,
 			);
 			path = project_fonts;
+			sourceTree = "<group>";
+		};
+		EAC3C3912BEDFE2B00535B98 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				EA2C145A2BE25A47009CCDBA /* Persistence_Original.swift */,
+				EA2C146D2BE7697B009CCDBA /* FetchedObjects.swift */,
+				EA2C148C2BE7BAD5009CCDBA /* Dish+CoreDataProperties.swift */,
+				EA2C146C2BE7697A009CCDBA /* Persistence.swift */,
+				EA2C14742BE79789009CCDBA /* ExampleDatabase.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		EAC3C3922BEDFE4800535B98 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA2C14642BE74B81009CCDBA /* Onboarding.swift */,
+				EA2C14662BE75346009CCDBA /* Home.swift */,
+				EA2C146A2BE75C3C009CCDBA /* UserProfile.swift */,
+				EA2C14682BE75387009CCDBA /* Menu.swift */,
+				EA6288402BEC8D6C002863F6 /* Welcome.swift */,
+				EA6288422BEC9324002863F6 /* EmailNotificationSignup.swift */,
+				EA2C148F2BE9B215009CCDBA /* DishDetails.swift */,
+				EA2C14702BE769E3009CCDBA /* MenuItem.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EAC3C3932BEDFE6500535B98 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EA2C14722BE76A10009CCDBA /* MenuList.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EAC3C3942BEDFE7200535B98 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				EA62883E2BEC57A0002863F6 /* UIApplication.swift */,
+				EA6288312BEB63EA002863F6 /* Color.swift */,
+				EA6288332BEB6847002863F6 /* FontList.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,7 +244,6 @@
 				EA2C146B2BE75C3C009CCDBA /* UserProfile.swift in Sources */,
 				EA6288412BEC8D6C002863F6 /* Welcome.swift in Sources */,
 				EA2C14672BE75346009CCDBA /* Home.swift in Sources */,
-				EA2C148D2BE7BAD5009CCDBA /* Dish+CoreDataClass.swift in Sources */,
 				EA2C148E2BE7BAD5009CCDBA /* Dish+CoreDataProperties.swift in Sources */,
 				EA2C146F2BE7697B009CCDBA /* FetchedObjects.swift in Sources */,
 				EA2C14762BE79789009CCDBA /* ExampleDatabase.xcdatamodeld in Sources */,
@@ -438,8 +466,7 @@
 				EA2C14752BE79789009CCDBA /* ExampleDatabase.xcdatamodel */,
 			);
 			currentVersion = EA2C14752BE79789009CCDBA /* ExampleDatabase.xcdatamodel */;
-			name = ExampleDatabase.xcdatamodeld;
-			path = /Users/tony/Documents/Developer/iOS/CapstoneProject/LittleLemonRestaurant/LittleLemonRestaurant/ExampleDatabase.xcdatamodeld;
+			path = ExampleDatabase.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
