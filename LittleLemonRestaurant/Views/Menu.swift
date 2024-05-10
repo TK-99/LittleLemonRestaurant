@@ -24,71 +24,6 @@ struct Menu: View {
     
     @State private var dataHasLoaded: Bool = false
     
-    func getMenuData() {
-        print("clearing data")
-        PersistenceController().clear()
-        
-        let urlString =  "https://raw.githubusercontent.com/Meta-Mobile-Developer-PC/Working-With-Data-API/main/menu.json"
-        let url = URL(string: urlString)!
-        let request = URLRequest(url: url)
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            if let data = data {
-                
-                //                let string = String(data: data, encoding: .utf8)
-                //                print(string)
-                let decoder = JSONDecoder()
-                
-                do {
-                    
-                    // process data
-                    let fullMenu = try decoder.decode(MenuList.self, from: data)
-                    
-                    menuItems = fullMenu.menu
-                    
-                    for menuItem in menuItems {
-                        //                guard let _ = exists(name: menuItem.title, context) else {
-                        //                    continue
-                        //                }
-                        let oneDish = Dish(context: viewContext)
-                        oneDish.title = menuItem.title
-                        oneDish.price = menuItem.price
-                        oneDish.itemDescription = menuItem.description
-                        oneDish.image = menuItem.image
-                        oneDish.category = menuItem.category
-                        
-                        //                            print(oneDish)
-//                        print(oneDish.title ?? "")
-//                        print(oneDish.price ?? "")
-//                        print(oneDish.itemDescription ?? "")
-//                        print(oneDish.image ?? "")
-//                        print(oneDish.category ?? "")
-                        
-                    }
-                    try? viewContext.save()
-//                    print("data has loaded \(dataHasLoaded)")
-                    dataHasLoaded = true
-//                    UserDefaults.standard.set(true, forKey: kDataDownloaded)
-                    
-                } catch let DecodingError.dataCorrupted(context) {
-                    print(context)
-                } catch let DecodingError.keyNotFound(key, context) {
-                    print("Key '\(key)' not found:", context.debugDescription)
-                    print("codingPath:", context.codingPath)
-                } catch let DecodingError.valueNotFound(value, context) {
-                    print("Value '\(value)' not found:", context.debugDescription)
-                    print("codingPath:", context.codingPath)
-                } catch let DecodingError.typeMismatch(type, context)  {
-                    print("Type '\(type)' mismatch:", context.debugDescription)
-                    print("codingPath:", context.codingPath)
-                } catch {
-                    print("error: ", error)
-                }
-            }
-        }
-        
-        task.resume()
-    }
-    
     var body: some View {
         
         ZStack {
@@ -99,15 +34,12 @@ struct Menu: View {
                         .padding([.top, .bottom], 0)
                         .padding(.horizontal, 8)
                         .frame(maxWidth: .infinity, alignment: .leading)
-//                        .font(.largeTitle)
                         .font(Font.custom("MarkaziText-Medium", size: 64))
                         .foregroundStyle(Color.theme.yellow)
-                    //                        .background(Color.green)
                     
                     HStack(alignment: .top) {
                         VStack(alignment: .leading, spacing: 0) {
                             Text("Chicago")
-//                                .font(.title)
                                 .font(Font.custom("MarkaziText-Medium", size: 50))
                                 .foregroundStyle(Color.theme.silver)
                             
@@ -117,31 +49,21 @@ struct Menu: View {
                                 .fontWeight(.semibold)
                                 .multilineTextAlignment(.leading)
                                 .frame(maxWidth: .infinity)
-                            //                                .lineLimit(5)
                                 .padding(.top, 16)
-                            
                             Spacer()
                         }
-                        //                        .background(Color.green)
-                        
                         .padding(.horizontal, 8)
-                        
-                        //                         Spacer()
                         Image(.hero)
                             .resizable()
                             .frame(width: 125, height: 140)
                             .cornerRadius(10)
                             .padding([.top, .bottom], 8)
                             .padding(.trailing, 8)
-                        
                     }
-                    //                    .background(Color.red)
                     HStack {
                         Image(systemName: "magnifyingglass")
                             .font(.headline)
                             .foregroundColor(Color.theme.black
-                                             
-                                             //                                searchText.isEmpty ? Color.theme.secondaryText : Color.theme.accent
                             )
                         TextField("Search menu...", text: $searchText)
                             .foregroundColor(Color.theme.black)
@@ -158,11 +80,7 @@ struct Menu: View {
                                 .onTapGesture {
                                     UIApplication.shared.endEditing()
                                     searchText = ""
-                                }
-                                     , alignment: .trailing
-                                     
-                            )
-                        
+                                }, alignment: .trailing)
                     }
                     .font(.headline)
                     .padding(8)
@@ -173,7 +91,6 @@ struct Menu: View {
                     .padding()
                 }
                 .background(Color.theme.green.ignoresSafeArea())
-                
                 
                 VStack(alignment: .center) {
                     HStack(alignment: .center) {
@@ -213,11 +130,7 @@ struct Menu: View {
                                 }
                         }
                     }
-                    //                        .padding()
-                    //                        .padding(.leading, 30)
-                    //                    }
                 }
-                //                .background(Color.red)
                 
                 FetchedObjects(
                     predicate:buildPredicate(),
@@ -236,11 +149,10 @@ struct Menu: View {
                     }
             }
             .onAppear { 
-//                print("appear")
-                
+                print("menu on appear")
                 if !dataHasLoaded {
-//                if !UserDefaults.standard.bool(forKey: kDataDownloaded) {
-                    getMenuData()
+                    MenuList.getMenuData(viewContext: viewContext)
+                    dataHasLoaded = true
                 }
             }
         }
@@ -280,8 +192,6 @@ struct Menu: View {
             }
                 Spacer()
                 
-                //        Rectangle()
-                //            .frame(width: 100, height: 100)
                 let url = URL(string: dish.image ?? "")
                 AsyncImage(url: url) { image in
                     image.resizable()

@@ -9,8 +9,8 @@ import SwiftUI
 
 struct UserProfile: View {
     
-//    @Environment(\.managedObjectContext) private var viewContext
-//    @Environment(\.presentationMode) var presentation
+    @Environment(\.managedObjectContext) private var viewContext
+    @Environment(\.presentationMode) var presentation
     @State private var showingAlert: Bool = false
     
     private var firstName: String = ""
@@ -302,7 +302,7 @@ extension UserProfile {
                 Button(action: {
                     UserDefaults.standard.set(false, forKey: kIsLoggedIn)
                     logoutButtonPressed = true
-                    PersistenceController().clear()
+                    PersistenceController.shared.clear()
 //                    self.presentation.wrappedValue.dismiss()
                 }, label: {
                     Text("Log Out")
@@ -316,7 +316,7 @@ extension UserProfile {
             }
             .navigationDestination(isPresented: $logoutButtonPressed) {
                 Welcome()
-                    .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
+                    .environment(\.managedObjectContext, viewContext)
             }
             .font(.footnote)
         }

@@ -95,50 +95,33 @@ extension Onboarding {
     private var personalInformationDetails: some View {
         VStack(alignment: .leading) {
             Text("First Name")
-                .font(.caption2)
+                .font(.caption)
                 .padding(.top, 10)
                 .padding(.bottom, 0)
             TextField(firstName, text: $firstName)
                 .font(.headline)
                 .padding(6)
-                .background(
-                    RoundedRectangle(cornerRadius: 5)
-                        .stroke(Color.theme.silver, lineWidth: 1 )
-                )
-                .padding(0)
-            
             Text("Last Name")
-                .font(.caption2)
+                .font(.caption)
                 .padding(.top, 10)
                 .padding(.bottom, 0)
             TextField(lastName, text: $lastName)
                 .font(.headline)
                 .padding(6)
-                .background(
-                    RoundedRectangle(cornerRadius: 5)
-                        .stroke(Color.theme.silver, lineWidth: 1 )
-                )
-                .padding(0)
-            
             Text("Email")
-                .font(.caption2)
+                .font(.caption)
                 .padding(.top, 10)
                 .padding(.bottom, 0)
             TextField(email, text: $email)
                 .font(.headline)
                 .padding(6)
-                .background(
-                    RoundedRectangle(cornerRadius: 5)
-                        .stroke(Color.theme.silver, lineWidth: 1 )
-                )
-                .padding(0)
-                .textContentType(.emailAddress)       // !IMPORTANT FOR EMAILS
-                .disableAutocorrection(true)          // !IMPORTANT FOR EMAILS
-                .textInputAutocapitalization(.never)  // !IMPORTANT
+                .keyboardType(.emailAddress)
+                .textContentType(.emailAddress)
+                .disableAutocorrection(true)
+                .textInputAutocapitalization(.never)
 //                .foregroundColor(email.isValidEmail ? .theme.black : .red)
-           
             Text("Phone number")
-                .font(.caption2)
+                .font(.caption)
                 .padding(.top, 10)
                 .padding(.bottom, 0)
             TextField(phoneNumber, text: $phoneNumber)
@@ -151,12 +134,8 @@ extension Onboarding {
                 }
                 .font(.headline)
                 .padding(6)
-                .background(
-                    RoundedRectangle(cornerRadius: 5)
-                        .stroke(Color.theme.silver, lineWidth: 1 )
-                )
-                .padding(0)
         }
+        .textFieldStyle(.roundedBorder)
         .padding()
     }
 }

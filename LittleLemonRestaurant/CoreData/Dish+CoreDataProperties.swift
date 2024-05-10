@@ -32,16 +32,12 @@ extension Dish : Identifiable {
     static func createDishesFrom(menuItems:[MenuItem],
                                  _ context:NSManagedObjectContext) {
         for menuItem in menuItems {
-            //                guard let _ = exists(name: menuItem.title, context) else {
-            //                    continue
-            //                }
             let oneDish = Dish(context: context)
             oneDish.title = menuItem.title
             oneDish.price = menuItem.price
             oneDish.itemDescription = menuItem.description
             oneDish.image = menuItem.image
             oneDish.category = menuItem.category
-            //                oneDish.id = menuItem.id
         }
     }
     

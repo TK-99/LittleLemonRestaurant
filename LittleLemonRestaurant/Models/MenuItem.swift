@@ -14,7 +14,4 @@ struct MenuItem: Codable, Identifiable {
     let price: String
     let title: String
     let category: String
-    
-    
-    
 }

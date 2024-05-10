@@ -12,8 +12,6 @@ struct Home: View {
     @Environment(\.managedObjectContext) private var viewContext
     
     var body: some View {
-        
-        
         TabView {
            
             Menu()
@@ -27,6 +25,7 @@ struct Home: View {
                 .tabItem {
                     Label("Profile", systemImage: "square.and.pencil")
                 }
+                .environment(\.managedObjectContext, viewContext)
         }
         
         .toolbar(content: {

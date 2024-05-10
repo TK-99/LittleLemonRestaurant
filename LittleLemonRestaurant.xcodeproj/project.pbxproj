@@ -89,10 +89,9 @@
 				EA6288372BEC3C6D002863F6 /* Info.plist */,
 				EA2C14512BE25A42009CCDBA /* LittleLemonRestaurantApp.swift */,
 				EAC3C3912BEDFE2B00535B98 /* CoreData */,
-				EAC3C3922BEDFE4800535B98 /* Views */,
-				EA6288362BEC3B63002863F6 /* project_fonts */,
-				EAC3C3942BEDFE7200535B98 /* Utilities */,
 				EAC3C3932BEDFE6500535B98 /* Models */,
+				EAC3C3922BEDFE4800535B98 /* Views */,
+				EAC3C3942BEDFE7200535B98 /* Utilities */,
 				EA2C14552BE25A47009CCDBA /* Assets.xcassets */,
 				EA2C14572BE25A47009CCDBA /* Preview Content */,
 			);
@@ -137,7 +136,6 @@
 				EA6288402BEC8D6C002863F6 /* Welcome.swift */,
 				EA6288422BEC9324002863F6 /* EmailNotificationSignup.swift */,
 				EA2C148F2BE9B215009CCDBA /* DishDetails.swift */,
-				EA2C14702BE769E3009CCDBA /* MenuItem.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -145,6 +143,7 @@
 		EAC3C3932BEDFE6500535B98 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EA2C14702BE769E3009CCDBA /* MenuItem.swift */,
 				EA2C14722BE76A10009CCDBA /* MenuList.swift */,
 			);
 			path = Models;
@@ -153,6 +152,7 @@
 		EAC3C3942BEDFE7200535B98 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				EA6288362BEC3B63002863F6 /* project_fonts */,
 				EA62883E2BEC57A0002863F6 /* UIApplication.swift */,
 				EA6288312BEB63EA002863F6 /* Color.swift */,
 				EA6288332BEB6847002863F6 /* FontList.swift */,
